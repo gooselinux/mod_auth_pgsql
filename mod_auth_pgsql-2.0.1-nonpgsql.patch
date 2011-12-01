@@ -1,0 +1,11 @@
+--- mod_auth_pgsql-2.0.1/mod_auth_pgsql.c.nonpgsql
++++ mod_auth_pgsql-2.0.1/mod_auth_pgsql.c
+@@ -775,7 +775,7 @@
+ 	 * user control to the next guy in line.
+ 	 */
+ 	if ((!sec->auth_pg_pwd_table) && (!sec->auth_pg_pwd_field)) {
+-		ap_log_rerror(APLOG_MARK, APLOG_WARNING, 0, r,
++		ap_log_rerror(APLOG_MARK, APLOG_DEBUG, 0, r,
+ 					  "[mod_auth_pgsql.c] - missing configuration parameters");
+ 		return DECLINED;
+ 	}
